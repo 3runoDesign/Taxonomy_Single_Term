@@ -1,4 +1,5 @@
 <?php
+namespace Taxonomy;
 
 if ( ! class_exists( 'Taxonomy_Single_Term' ) ) :
 /**
@@ -315,9 +316,9 @@ class Taxonomy_Single_Term {
 		$nonce     = isset( $_POST['nonce'] ) ? sanitize_text_field( $_POST['nonce'] ) : '';
 		$term_name = isset( $_POST['term_name'] ) ? sanitize_text_field( $_POST['term_name'] ) : false;
 		$taxonomy  = isset( $_POST['taxonomy'] ) ? sanitize_text_field( $_POST['taxonomy'] ) : false;
-		
+
 		$friendly_taxonomy = $this->taxonomy()->labels->singular_name;
-		
+
 		// Ensure user is allowed to add new terms
 		if( !$this->allow_new_terms ) {
 			wp_send_json_error( __( "New $friendly_taxonomy terms are not allowed" ) );
@@ -542,7 +543,7 @@ class Taxonomy_Single_Term {
 			return $this->walker;
 		}
 		require_once( 'walker.taxonomy-single-term.php' );
-		$this->walker = new Taxonomy_Single_Term_Walker( $this->taxonomy()->hierarchical, $this->input_element );
+		$this->walker = new Taxonomy\Taxonomy_Single_Term_Walker( $this->taxonomy()->hierarchical, $this->input_element );
 
 		return $this->walker;
 	}

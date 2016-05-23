@@ -1,4 +1,5 @@
 <?php
+namespace Taxonomy;
 
 if ( ! class_exists( 'Taxonomy_Single_Term_Walker' ) && class_exists( 'Walker' ) ) :
 

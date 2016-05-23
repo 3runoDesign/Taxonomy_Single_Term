@@ -1,0 +1,16 @@
+{
+    "name": "webdevstudios/taxonomy_single_term",
+    "authors": [
+        {
+            "name": "WebDevStudios",
+            "email": "contact@webdevstudios.com",
+            "homepage": "https://github.com/WebDevStudios",
+            "role": "Developer"
+        }
+    ],
+    "type": "library",
+    "autoload": {
+        "files": ["class.taxonomy-single-term.php"]
+    },
+    "require": {}
+}

@@ -7,8 +7,7 @@ if ( ! class_exists( 'Taxonomy\Taxonomy_Single_Term' ) ) :
  *
  * Usage:
  *
- * $custom_tax_mb = new Taxonomy_Single_Term( 'custom-tax-slug', array( 'post_type' ), 'type' ); // 'type' can be 'radio' or 'select' (default: radio)
- *
+ * $custom_tax_mb = new \Taxonomy\Taxonomy_Single_Term( 'category', array( 'post_type' ), 'type' ); // 'type' can be 'radio' or 'select' (default: radio)
  * Update optional properties:
  *
  * $custom_tax_mb->set( 'priority', 'low' );
